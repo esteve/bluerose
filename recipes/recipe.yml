@@ -22,10 +22,12 @@ modules:
     install:
       packages:
         - epel-release
+  - type: dnf
     repos:
       copr:
         enable:
           - crb
+  - type: dnf
     group-install:
       packages:
         - "KDE Plasma Workspaces"
