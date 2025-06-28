@@ -21,7 +21,7 @@ modules:
   - type: dnf
     install:
       packages:
-        - @kde-desktop-environment
+        - \@kde-desktop-environment
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
