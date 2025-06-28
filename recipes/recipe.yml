@@ -18,15 +18,21 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
   - type: dnf
     install:
       packages:
         - epel-release
+
+  - type: script
+    snippets:
+      - "/usr/bin/crb enable"
+
   - type: dnf
-    repos:
-      copr:
-        enable:
-          - crb
+    install:
+      packages:
+        - "@kde-desktop-environment"
+
   - type: dnf
     group-install:
       packages:
