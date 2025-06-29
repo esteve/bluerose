@@ -40,6 +40,10 @@ modules:
 
   - type: script
     snippets:
+      - "/usr/bin/systemctl enable sddm"
+
+  - type: script
+    snippets:
       - "/usr/bin/systemctl set-default graphical.target"
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
